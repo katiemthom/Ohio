@@ -1,0 +1,56 @@
+library(gpclib)
+library(maps)
+library(maptools)
+gpclibPermit()
+library(RColorBrewer)
+library(classInt)
+
+# read school district shape file downloaded from NCES
+OH <- readShapePoly('/Users/associate16/Desktop/SpatialDataExport_7_2_2013/ACS2010')
+
+# create list of NCESIDs for which we have not data
+bye <- c(3904361, 3904358, 3904359, 3904349, 3904357, 3904348, 3904353, 3900094, 3999998, 3904354, 3904895, 3904352, 3904896, 3904355, 3904627, 3904612, 3904360, 3999997, 3904365, 3910001, 3904364, 3904363, 3904351, 3904362 ,3904350 ,3900537)
+
+# remove entries by NCESIDs in bye
+for (i in 1:length(bye)) {
+	OH <- OH[OH@data$NCESID != bye[i] ,]
+}
+
+# read Free/Reduced Price Lunch Data
+FRPLdata <- read.csv("/Users/associate16/Desktop/07_08_13_FRPL_OH.csv")
+
+# merge shape data with FRPL data
+OH@data <- merge(OH@data, FRPLdata, by.x="NCESID", by.y="NCESID", all.X=T, sort=F)
+
+# plot districts by percentage of students in FRPL program 
+plotvar <- OH@data$FRPLpercent
+
+# use four colors
+nclr <- 4
+
+# use "BuGn" color palette 
+plotclr <- brewer.pal(nclr,"BuGn")
+
+# sets breaks at 0-40, 40-60, 60-80, and 80-100% FRPL
+class<-classIntervals(plotvar,nclr, style="fixed", fixedBreaks=c(0,40,60,80,100))
+
+# matches colors to districts
+colcode<-findColours(class,plotclr)
+
+# plots map
+plot(OH, xlim=c(-84.8,-80.5), ylim=c(38.4,42.3))
+
+# adds color
+plot(OH, col=colcode, add=T)
+
+# adds legend
+legend(-81.5, 39.2, legend=names(attr(colcode, "table")), fill=attr(colcode, "palette"), cex=0.6, bty="n")
+
+# read school achievement data for lowest 20% of school
+ALLdata <- read.csv('/Users/associate16/Desktop/GIS/Student Achievement Data/Ohio_Achievement_and_Latlon_wRank.csv')
+
+# sets new plot variable to averaged reading/math test scores for each school 
+plotvar2 <-ALLdata$Avg
+
+# plots points representing schools
+points(ALLdata$Lon, ALLdata$Lat, pch=16, col="red", cex=0.2)
