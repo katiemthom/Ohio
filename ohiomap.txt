@@ -1,9 +1,11 @@
+# make sure these are installed via "Packages and Data" >> Package Installer
 library(gpclib)
 library(maps)
 library(maptools)
 gpclibPermit()
 library(RColorBrewer)
 library(classInt)
+library(raster)
 
 # read school district shape file downloaded from NCES
 OH <- readShapePoly('/Users/associate16/Desktop/SpatialDataExport_7_2_2013/ACS2010')
@@ -40,7 +42,10 @@ colcode<-findColours(class,plotclr)
 # plots map
 plot(OH, xlim=c(-84.8,-80.5), ylim=c(38.4,42.3))
 
-# adds color
+# creates zoom functionality
+zoom(OH, ext = drawExtent(), new = T, col = colcode)
+
+# adds color (not needed if zooming)
 plot(OH, col=colcode, add=T)
 
 # adds legend
