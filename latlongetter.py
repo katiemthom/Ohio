@@ -21,7 +21,7 @@ for row in test:
 	#slows down the script because the api only allows you to get so much data per second
     time.sleep(1)
     #the number of the column that contains the full address of the school goes here
-    full_add = row[13]
+    full_add = row[0]
     #this is where we get the lat and lon data
     place, (lat, lng) = list(g.geocode(full_add, exactly_one=False))[0]
     #this is where the data is written to the output file 
