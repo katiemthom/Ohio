@@ -1,0 +1,47 @@
+Map {
+  background-color: transparent;
+  
+}
+
+#ohiopifortilemill {
+  marker-width:3;
+  marker-fill:#f45;
+  marker-line-color:#000;
+  marker-allow-overlap:true;
+  [piscore  >= 30] { marker-width:14; }
+  [piscore  >= 50] { marker-width:10; }
+  [piscore  >= 70] { marker-width:6; }
+  [Type = "Community School Startup"] { marker-fill: orange;}
+  [Type = "Community School Conversion"] { marker-fill: orange;}
+}
+
+#acs2010 {
+  line-color:#000;
+  line-opacity: .5;
+  line-width:0.75;
+  polygon-opacity: .85;
+  [perCapitaI >= 10000] { polygon-fill:#BDD7E7;}
+  [perCapitaI >= 25000] { polygon-fill:white; }
+}
+
+#schoolsonlytop20pire {
+  marker-width:8;
+  marker-fill:green;
+  marker-line-color:black;
+  marker-allow-overlap:true;
+  //[Type = "Community School Startup"] { marker-fill: green; }
+}
+
+#privateschools0809 {
+  marker-width:6;
+  marker-fill:yellow;
+  marker-line-color:orange;
+  marker-allow-overlap:true;
+}
+
+#ohconcentrationpop {
+  line-color:#594;
+  line-width:0;
+  [Concentrat >= 0] { polygon-opacity: 0; }
+  [Concentrat >= .0015] { polygon-fill: #08519C; polygon-opacity: .75;}
+}
