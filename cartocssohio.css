@@ -22,6 +22,7 @@ Map {
   polygon-opacity: .85;
   [perCapitaI >= 10000] { polygon-fill:#BDD7E7;}
   [perCapitaI >= 25000] { polygon-fill:white; }
+  [perCapitaI <= 0] { polygon-opacity: 0; line-opacity: 0;} 
 }
 
 #schoolsonlytop20pire {
