@@ -1,0 +1,51 @@
+Map {
+  background-color: transparent;
+}
+
+#countries {
+  ::outline {
+    line-color: #85c5d3;
+    line-width: 2;
+    line-join: round;
+  }
+  polygon-fill: #fff;
+}
+
+#acs2010 {
+  line-color:#5D99BB;
+  line-width:0.5;
+  polygon-opacity:.5;
+  polygon-fill:#B4CDE1;
+  [NAME = "School District Not Defined (Water)"]{polygon-opacity: 0; line-width: 0;}
+}
+
+
+#ohiopifortilemill {
+  marker-fill:#E4002B;
+  marker-opacity: .5;
+  marker-line-color:#E4002B;
+  marker-allow-overlap:true;
+  [zoom = 7]{marker-width:2;}
+  [zoom = 8]{marker-width:4;}
+  [zoom = 9]{marker-width:6;}
+  [zoom = 10]{marker-width:8;}
+  [zoom = 11]{marker-width:10;}
+  [zoom = 12]{marker-width:12;}
+  [zoom = 13]{marker-width:14;}
+}
+
+
+#schoolsonlytop20pire {
+  marker-width:2;
+  marker-fill:#004F71;
+  marker-line-color:#004F71;
+  marker-opacity: .5;
+  marker-allow-overlap:true;
+  [zoom = 7]{marker-width:2;}
+  [zoom = 8]{marker-width:4;}
+  [zoom = 9]{marker-width:6;}
+  [zoom = 10]{marker-width:8;}
+  [zoom = 11]{marker-width:10;}
+  [zoom = 12]{marker-width:12;}
+  [zoom = 13]{marker-width:14;}
+}
