@@ -1,0 +1,52 @@
+Map {
+  background-color: transparent;
+}
+
+
+
+#wcgroup {
+  line-color:white;
+  line-width:0.75;
+  line-opacity: 1;
+  polygon-fill:#b4cce0; 
+  polygon-opacity:.5;
+  [CGroup = 9] {polygon-opacity:0;}
+}
+
+//Group =1 is low performing charters
+//Uncomment me to show low performing charters.  
+/*#ohioallschoolspi {
+  marker-width:2;
+  marker-fill:#5D99BB;
+  marker-line-color:#5D99BB;
+  marker-allow-overlap:false;
+  marker-opacity: .6;
+  [Group = 1]{marker-fill:#E4002B;marker-line-color:#E4002B; marker-opacity: 1;}
+  [zoom = 7]{marker-width:2;}
+  [zoom = 8]{marker-width:4;}
+  [zoom = 9]{marker-width:6;}
+  [zoom = 10]{marker-width:8;}
+  [zoom = 11]{marker-width:10;}
+  [zoom = 12]{marker-width:12;}
+  [zoom = 13]{marker-width:14;}
+}*/
+
+#ohioallschoolspi {
+  marker-width:2;
+  marker-fill:#5D99BB;
+  marker-line-color:#5D99BB;
+  marker-allow-overlap:false;
+  marker-opacity: .6;
+  [SchoolOrgType = "Community School Conversion"]{marker-fill:#004F71;marker-line-color:#004F71; marker-opacity: 1;}
+  [SchoolOrgType = "Community School Startup"]{marker-fill:#004F71;marker-line-color:#004F71; marker-opacity: 1;}
+  [zoom = 7]{marker-width:2;}
+  [zoom = 8]{marker-width:4;}
+  [zoom = 9]{marker-width:6;}
+  [zoom = 10]{marker-width:8;}
+  [zoom = 11]{marker-width:10;}
+  [zoom = 12]{marker-width:12;}
+  [zoom = 13]{marker-width:14;}
+}
+
+
+
