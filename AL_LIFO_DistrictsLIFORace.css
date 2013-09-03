@@ -1,0 +1,17 @@
+Map {
+  background-color: transparent;
+}
+
+#alliforace {
+  line-color:white;
+  line-width:0.75;
+  line-opacity: .75;
+  polygon-opacity:0;
+  [Policy = "3"] { polygon-fill:#e3002a; polygon-opacity:.7;}
+  [Policy = "1"] { polygon-fill:#004F71; polygon-opacity:.7;}
+  [Policy = "2"] { polygon-fill:#5D99BB; polygon-opacity:.7;}
+  [Policy = "NA"] { polygon-fill:#B4CDE1; polygon-opacity:.7;}
+  [Non-white >= .3] {  line-color:#e3002a;
+  line-width: .75;
+  line-opacity: .75;}
+}
