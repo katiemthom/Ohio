@@ -1,0 +1,31 @@
+Map {
+  background-color: transparent;
+}
+
+#countries {
+  ::outline {
+    line-color: #85c5d3;
+    line-width: 2;
+    line-join: round;
+  }
+  polygon-fill: transparent;
+}
+
+#clevelandonly {
+  line-color:black;
+  line-width:.75;
+  line-opacity: .8;
+  [Concentrat >= 0] { polygon-opacity: 0; }
+  [Concentrat >= .0015] { polygon-fill: #08519C; polygon-opacity: 0.1;}
+}
+
+
+#ohiopifortilemillmoc {
+  marker-width:6;
+  marker-allow-overlap:true;
+  [hps = 1] {marker-line-color: black; marker-fill: gold; marker-width: 8; marker-opacity: .5;}
+  [openseats = 233] {marker-width:18; marker-opacity: .5;}
+  [hyperseg = 1] {marker-fill: red; marker-line-color: black; marker-opacity: .8;}
+  [hyperseg = 0] {marker-fill: red; marker-line-color: black; marker-opacity: .4;}
+}
+
