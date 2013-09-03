@@ -2,15 +2,6 @@ Map {
   background-color: transparent;
 }
 
-#countries {
-  ::outline {
-    line-color: #85c5d3;
-    line-width: 2;
-    line-join: round;
-  }
-  polygon-fill: #fff;
-}
-
 #acs2010 {
   line-color:#5D99BB;
   line-width:0.5;
@@ -18,7 +9,6 @@ Map {
   polygon-fill:#B4CDE1;
   [NAME = "School District Not Defined (Water)"]{polygon-opacity: 0; line-width: 0;}
 }
-
 
 #ohiopifortilemill {
   marker-fill:#E4002B;
@@ -33,7 +23,6 @@ Map {
   [zoom = 12]{marker-width:12;}
   [zoom = 13]{marker-width:14;}
 }
-
 
 #schoolsonlytop20pire {
   marker-width:2;
