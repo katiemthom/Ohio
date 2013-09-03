@@ -1,0 +1,36 @@
+Map {
+  background-color: transparent;
+}
+
+
+#acs2010 {
+  line-color:#5D99BB;
+  line-width:0.5;
+  polygon-opacity:.5;
+  polygon-fill:#B4CDE1;
+  [NAME = "School District Not Defined (Water)"]{polygon-opacity: 0; line-width: 0;}
+}
+
+#ohioallschoolspi {
+  marker-opacity: .4;
+  marker-allow-overlap:true;
+  [zoom = 7]{marker-width:2;}
+  [zoom = 8]{marker-width:4;}
+  [zoom = 9]{marker-width:6;}
+  [zoom = 10]{marker-width:8;}
+  [zoom = 11]{marker-width:10;}
+  [zoom = 12]{marker-width:12;}
+  [zoom = 13]{marker-width:14;}
+  [PIGroup = 1] {marker-fill: #FF0033;marker-line-color:#FF0033;}
+  [PIGroup = 2]{marker-fill:#FF0099;marker-line-color:#FF0099;}
+  [PIGroup = 3]{marker-fill:#CC00FF;marker-line-color:#CC00FF;}
+  [PIGroup = 4]{marker-fill:#6600FF;marker-line-color:#6600FF;}
+  [PIGroup = 5]{marker-fill:#0000FF;marker-line-color:#0000FF;}
+}
+
+#ohioallschoolspi {
+  marker-width:6;
+  marker-fill:#f45;
+  marker-line-color:#813;
+  marker-allow-overlap:true;
+}
