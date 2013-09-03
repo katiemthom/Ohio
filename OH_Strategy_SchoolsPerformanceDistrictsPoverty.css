@@ -1,0 +1,45 @@
+Map {
+  background-color: transparent;
+}
+
+#ohiopifortilemill {
+  marker-width:.2;
+  marker-fill:#f45;
+  marker-line-color:#f45;
+  marker-opacity: .75;
+  marker-allow-overlap:true;
+  [zoom = 8]{marker-width:2;}
+    [zoom = 9]{marker-width:3;}
+  [zoom = 10]{marker-width:4;}
+  [zoom = 11]{marker-width:5;}
+  [zoom = 12]{marker-width:6;}
+  [zoom = 13]{marker-width:7;}
+}
+
+#acs2010 {
+  line-color:white;
+  line-opacity: 1;
+  line-width:0.75;
+  polygon-opacity: .4;
+  polygon-fill: #B4cDE1;
+  [perCapitaI >= 25000] { polygon-fill:#5D99BB; polygon-opacity: .7;}
+  [perCapitaI <= 20000] { polygon-fill:#004f71;polygon-opacity: .7;}
+  [perCapitaI <= 0] { polygon-opacity: 0; line-opacity: 0;} 
+}
+
+
+#schoolsonlytop20pire {
+  marker-width:.2;
+  marker-fill:green;
+  marker-line-color:green;
+  marker-opacity: .75;
+  marker-allow-overlap:true;
+  [zoom = 8]{marker-width:2;}
+  [zoom = 9]{marker-width:3;}
+  [zoom = 10]{marker-width:4;}
+  [zoom = 11]{marker-width:5;}
+  [zoom = 12]{marker-width:6;}
+  [zoom = 13]{marker-width:7;}
+  
+}
+
