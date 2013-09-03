@@ -1,0 +1,16 @@
+Map {
+  background-color: transparent;
+}
+
+
+#wcgroup {
+  line-color:white;
+  line-width:0.75;
+  line-opacity: 1;
+  [CGroup = 0] { polygon-fill:#e3002a; polygon-opacity:.75; line-width:2;}
+  [CGroup = 1] { polygon-fill:#004f70; polygon-opacity:.75;}
+  [CGroup = 2] { polygon-fill:#5d98ba; polygon-opacity:.75;}
+  [CGroup = 3] { polygon-fill:#b4cce0; polygon-opacity:.75;}
+  [CGroup = 9] {polygon-opacity:0;}
+}
+
